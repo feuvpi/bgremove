@@ -1,0 +1,37 @@
+# Virtual environment directory
+env/
+venv/
+myenv/
+
+# IDE project files
+.idea/
+.vscode/
+.pycharm/
+
+# Build artifacts
+build/
+dist/
+target/
+
+# Debugging files
+*.pyc
+*.pyo
+.so
+
+# Temporary files and directories
+*.temp
+tmp/
+cache/
+*.zip
+*.rar
+*.tar
+*.gz
+*.bz2
+*.xz
+
+# Other unnecessary files
+*.swp
+*.sln
+*.csproj
+*.sln
+*.gitmodules
