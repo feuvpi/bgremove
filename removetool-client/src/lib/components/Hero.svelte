@@ -1,3 +1,81 @@
+<script>
+// @ts-nocheck
+
+import { onMount } from 'svelte';
+
+let dropArea; // Reference to the label element
+
+// Function to handle file selection
+function handleFile(files) {
+  const file = files[0];
+  // Do something with the file, for example:
+  console.log('File selected:', file);
+
+  // If you want to preview the image, you can use FileReader
+  const reader = new FileReader();
+  reader.onload = function (e) {
+    const img = new Image();
+    img.src = e.target.result;
+    img.onload = function () {
+      // You can append the image to a container to display it
+      // For example:
+      // document.getElementById('preview-container').appendChild(img);
+    };
+  };
+  reader.readAsDataURL(file);
+}
+
+// Function to handle drag over event
+function handleDragOver(e) {
+  e.preventDefault();
+  e.currentTarget.classList.add('border-blue-500', 'border');
+}
+
+// Function to handle drag leave event
+function handleDragLeave(e) {
+  e.currentTarget.classList.remove('border-blue-500', 'border');
+}
+
+// Function to handle drop event
+function handleDrop(e) {
+  e.preventDefault();
+  e.currentTarget.classList.remove('border-blue-500', 'border');
+  const files = e.dataTransfer.files;
+  if (files.length > 0) {
+  handleFile(files);
+  }
+  
+}
+
+// Function to open file input dialog when the button is clicked
+function openFileDialog() {
+  const inputElement = dropArea.querySelector('input[type=file]');
+  inputElement.click();
+}
+
+// function handleInputChange(e){
+
+// }
+
+
+
+// Run the initialization logic when the component mounts
+onMount(() => {
+  dropArea = document.getElementById('drop');
+  dropArea.addEventListener('dragover', handleDragOver);
+  dropArea.addEventListener('dragleave', handleDragLeave);
+  dropArea.addEventListener('drop', handleDrop);
+  inputElement.addEventListener('change', function(event) {
+        const files = event.target.files;
+        if (files.length > 0) {
+            // If files are selected, pass them to the handleFile function
+            handleFile(files);
+        }
+    }, { once: true });
+});
+</script>
+
+
 <section class="pt-20 md:pt-40">
     <div class="container mx-auto px-8 lg:flex">
         <div class="text-center lg:text-left lg:w-1/2">
@@ -23,18 +101,18 @@
                     <div class="relative w-full">
                       <div class="items-center justify-center max-w-xl mx-auto">
                         
-                        <label class="flex flex-col justify-center align-middle place-content-center w-80 h-72 px-4 transition bg-white border-2 border-gray-300 border-dashed rounded-md appearance-none cursor-pointer hover:border-gray-400 focus:outline-none" id="drop">
-                            <button type="button" class="w-fit self-center place-self-center py-4 px-12 bg-teal-500 hover:bg-teal-600 rounded text-white mb-4">UPLOAD</button>
+                        <label for="input" bind:this={dropArea} class="flex flex-col justify-center align-middle place-content-center w-80 h-72 px-4 transition bg-white border-2 border-gray-300 border-dashed rounded-md appearance-none cursor-pointer hover:border-gray-400 focus:outline-none" id="drop">
+                            <button type="button" class="w-fit self-center place-self-center py-4 px-12 bg-teal-500 hover:bg-teal-600 rounded text-white mb-4" on:click={openFileDialog}>UPLOAD</button>
                             <div class="flex justify-center">
-                              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path>
-                              </svg>
-                              <span class="font-medium text-gray-600 ml-1">
-                                 or drop a <span class="text-blue-600 underline ml-[4px]">image</span>
-                              </span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path>
+                                </svg>
+                                <span class="font-medium text-gray-600 ml-1">
+                                    or drop a <span class="text-blue-600 underline ml-[4px]">image</span>
+                                </span>
                             </div>
-                            <input type="file" name="file_upload" class="hidden" accept="image/png,image/jpeg" id="input">
-                          </label>
+                            <input type="file" name="file_upload" class="hidden" accept="image/png,image/jpeg" id="input" onchange="handleFile(this.files)">
+                        </label>
                       </div>
                     </div>
                   </div>

@@ -1,5 +1,6 @@
 <script>
 	let mobileMenuOpen = false;
+	import * as Popover from "$lib/components/ui/popover";
 
 	function toggleMobileMenu() {
 		mobileMenuOpen = !mobileMenuOpen;
@@ -22,7 +23,11 @@
 				<a href="#" class="text-gray-600 hover:text-purple-700">About</a>
 			  </li>
 		  <li>
-			<a href="#" class="text-gray-600 hover:text-purple-700">Tools</a>
+			<Popover.Root>
+				<Popover.Trigger>Tools</Popover.Trigger>
+				<Popover.Content>Place content for the popover here.</Popover.Content>
+			  </Popover.Root>
+			
 		  </li>
 		  <li>
 			<a href="#" class="text-gray-600 hover:text-purple-700">Docs & API</a>
