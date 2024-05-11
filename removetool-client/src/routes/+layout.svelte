@@ -12,7 +12,7 @@
 	</main>
 
 	<footer>
-		<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
+		<p>Are you interested in buying this App? <a href="https://kit.svelte.dev">Reach out</a> the developers.</p>
 	</footer>
 </div>
 

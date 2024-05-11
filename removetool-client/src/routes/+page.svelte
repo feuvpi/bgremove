@@ -1,5 +1,6 @@
 <script>
 import Hero from "$lib/components/Hero.svelte"
+import ImageSlider from "$lib/components/ImageSlider.svelte";
 </script>
 
 <svelte:head>
@@ -8,4 +9,6 @@ import Hero from "$lib/components/Hero.svelte"
 </svelte:head>
 
 <Hero/>
+
+<ImageSlider/>
 

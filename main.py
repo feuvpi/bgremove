@@ -3,8 +3,10 @@ from flask import Flask, render_template, request, send_file
 from rembg import remove
 from PIL import Image
 from io import BytesIO
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)  # Add this line to enable CORS for all routes
 
 
 @app.route("/", methods=["GET", "POST"])
@@ -20,10 +22,13 @@ def upload_file():
             output_image = remove(
                 input_image,
                 post_process_mask=True,
-                format="JPEG",
-                quality=95,
-                strength=0.5,
+                post_process_mask_steps=5,
                 alpha_matting=True,
+                alpha_matting_foreground_threshold=0.3,  # Increase this value
+                alpha_matting_background_threshold=0.1,  # Decrease this value
+                strength=0.4,  # Reduce the strength
+                format="PNG",
+                quality=100,
             )
 
             img_io = BytesIO()
