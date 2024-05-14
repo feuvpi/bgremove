@@ -118,7 +118,7 @@ onMount(() => {
 </script>
 
 
-<section class="pt-20 md:pt-40">
+<section class="pt-8 md:pt-8">
     <div class="container mx-auto px-8 lg:flex">
         <div class="text-center lg:text-left lg:w-1/2">
             <img src="/cathero.png" alt="" class="relative w-48 border-2 border-emerald-500 top-100 w-40 rounded-full" />

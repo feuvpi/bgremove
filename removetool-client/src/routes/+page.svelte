@@ -1,4 +1,5 @@
 <script>
+	import Examples from "$lib/components/Examples.svelte";
 import Hero from "$lib/components/Hero.svelte"
 import ImageSlider from "$lib/components/ImageSlider.svelte";
 </script>
@@ -10,5 +11,8 @@ import ImageSlider from "$lib/components/ImageSlider.svelte";
 
 <Hero/>
 
-<ImageSlider/>
+<div class="flex flex-row">
+
+</div>
+<Examples/>
 

@@ -14,7 +14,7 @@
   </script>
 
 <!-- svelte-ignore a11y-missing-attribute -->
-<div class="relative h-64 w-64">
+<div class="relative h-64 w-64 ">
     <!-- svelte-ignore a11y-missing-attribute -->
     <img
       class="absolute top-0 left-0 h-full w-full object-cover"
