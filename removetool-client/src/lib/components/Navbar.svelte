@@ -7,7 +7,7 @@
 	}
 </script>
 
-<nav class="sticky top-0 z-9999 bg-white py-2.5 dark:bg-gray-900 border-b-2 border-slate-50 shadow-sm">
+<nav class="sticky top-0 z-50 bg-white py-2.5 dark:bg-gray-900 border-b-2 border-slate-50 shadow-sm">
 	<div class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto gap-4">
 	  <a href="#" class="flex items-center">
 		<img

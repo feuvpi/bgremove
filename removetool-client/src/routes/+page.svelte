@@ -2,6 +2,7 @@
 	import Examples from "$lib/components/Examples.svelte";
 import Hero from "$lib/components/Hero.svelte"
 import ImageSlider from "$lib/components/ImageSlider.svelte";
+	import InputImage from "$lib/components/InputImage.svelte";
 	import Subscribe from "$lib/components/Subscribe.svelte";
 </script>
 
@@ -16,6 +17,8 @@ import ImageSlider from "$lib/components/ImageSlider.svelte";
 
 </div>
 <Examples/>
+
+<InputImage/>
 
 <Subscribe/>
 

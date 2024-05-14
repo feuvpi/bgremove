@@ -1,4 +1,4 @@
-<div class="self-center lg:min-w-96 mt-24 mx-4 px-6 sm:mt-56 lg:px-8">
+<div class="self-center lg:min-w-96 mt-12 mx-4 px-6 sm:mt-24 lg:px-8">
     <div
         class="relative isolate overflow-hidden px-6 py-24 shadow-md rounded-2xl sm:rounded-3xl sm:px-24 xl:py-32">
        

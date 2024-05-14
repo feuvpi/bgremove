@@ -118,10 +118,10 @@ onMount(() => {
 </script>
 
 
-<section class="pt-8 md:pt-8">
+<section class="z-0 pt-8 md:pt-8">
     <div class="container mx-auto px-8 lg:flex">
-        <div class="text-center lg:text-left lg:w-1/2">
-            <img src="/cathero.png" alt="" class="relative w-48 border-2 border-emerald-500 top-100 w-40 rounded-full" />
+        <div class="text-center lg:text-left lg:w-1/2 z-0">
+            <img src="/cathero.png" alt="" class="relative w-48 border-2 border-emerald-500 top-100 z-0 rounded-full" />
             <h1 class="font-sans text-4xl lg:text-5xl xl:text-6xl font-bold leading-none">Remove Backgrounds from Images</h1>
             <p class="text-xl lg:text-2xl mt-6 font-medium font-sans">Quick, easy and free background removal tool.</p>
 
