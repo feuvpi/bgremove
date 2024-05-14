@@ -55,14 +55,14 @@ import * as Carousel from "$lib/components/ui/carousel/index";
     {:else}
       <!-- Render grid for normal screen -->
       <h2 class="text-center lg:mt-32 mt-18 font-sans text-4xl font-bold text-slate-800">Remove images backgrounds with ease</h2>
-      <div class="flex flex-wrap mt-4 p-2 border-2 justify-centers shadow-lg rounded-md">
-        <div class="w-1/3 p-2 ">
+      <div class="self-center flex max-w-7xl w-full flex-wrap mt-4 p-2 border-2 justify-center shadow-lg rounded-md">
+        <div class="w-1/3 p-2 flex text-center justify-center ">
             <ImageSlider image1="/teste.png" image2="/FELV-cat.jpg" />
           </div>
-          <div class="w-1/3 p-2">
+          <div class="w-1/3 p-2  text-center justify-center ">
             <ImageSlider image1="/beijaflor-nobg.png" image2="/beijaflor.jpg" />
           </div>
-          <div class="w-1/3 p-2">
+          <div class="w-1/3 p-2  text-center justify-center ">
             <ImageSlider image1="/passaro-nobg.png" image2="/passaro.jpg" />
           </div>
 

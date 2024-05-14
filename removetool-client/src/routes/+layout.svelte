@@ -6,7 +6,7 @@
 </script>
 
 <div class="min-h-screen flex flex-col">
-  <Navbar class="sticky top-0 bg-gray-800 p-4 text-white" />
+  <Navbar />
 
   <main class="flex-1 flex flex-col p-4 w-fit mx-auto mb-24">
     <slot />
